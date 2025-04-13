@@ -1,0 +1,12 @@
+Flask==3.0.3
+flask-cors
+pandas
+numpy
+streamlit
+joblib
+torch
+transformers
+scikit-learn
+requests
+bs4
+werkzeug
