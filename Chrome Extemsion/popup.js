@@ -1,7 +1,7 @@
 document.getElementById("checkEmail").addEventListener("click", () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.tabs.sendMessage(tabs[0].id, { action: "getEmailData" }, (response) => {
-            fetch("https://phisingemaildetector.vercel.app/detect", {
+            fetch("https://2cb0-117-219-22-193.ngrok-free.app/detect", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -28,9 +28,31 @@ function formatResults(email, results) {
         <ul>`;
 
     for (const [rule, result] of Object.entries(results)) {
-        resultHTML += `<li><strong>${rule.replace(/_/g, ' ')}:</strong> ${result ? 'Suspicious' : 'Safe'}</li>`;
+        if (rule === "bert_prediction") {
+            resultHTML += `<li><strong> Email Body:</strong> ${formatBertResult(result)}</li>`;
+        } else {
+            resultHTML += `<li><strong>${rule.replace(/_/g, ' ')}:</strong> ${formatRuleResult(result)}</li>`;
+        }
     }
 
     resultHTML += '</ul>';
     return resultHTML;
+}
+
+function formatRuleResult(result) {
+    if (typeof result === "boolean") {
+        return result ? 'Suspicious' : 'Safe';
+    } else if (typeof result === "string") {
+        return result;
+    }
+    return 'Unknown';
+}
+
+function formatBertResult(result) {
+    if (typeof result === "string") {
+        if (result.toLowerCase().includes("phishing")) return 'Phishing';
+        if (result.toLowerCase().includes("legitimate")) return 'Legitimate';
+        return `Error: ${result}`;
+    }
+    return 'Unknown';
 }

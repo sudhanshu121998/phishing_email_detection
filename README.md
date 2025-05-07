@@ -63,15 +63,3 @@ Phishing Email Detector is a web application and Chrome extension designed to he
 1. Open Gmail in Chrome.
 2. Click the Phishing Email Detector icon in the Chrome toolbar
 
-## Contributors
-
-Thanks to these wonderful people who have contributed to the project:
-
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/GauraVYadaV70"><img src="https://avatars.githubusercontent.com/u/118387281?s=100&v=4" width="100px;" alt=""/><br /><sub><b>Gaurav Yadav</b></sub></a><br />💻📖</td>
-    <td align="center"><a href="https://github.com/VinayThakur04"><img src="https://avatars.githubusercontent.com/u/113307818?s=100&v=4" width="100px;" alt=""/><br /><sub><b>Vinay Kumar thakur</b></sub></a><br />🔧🚧</td>
-    <td align="center"><a href="https://github.com/Mandira001"><img src="https://avatars.githubusercontent.com/u/118953526?v=4" width="100px;" alt=""/><br /><sub><b>Mandira Nagar</b></sub></a><br />📝💡</td>
-  </tr>
-</table>
-
