@@ -3,12 +3,12 @@
     "name": "Phishing Email Detector",
     "version": "1.0",
     "description": "Detect phishing emails directly from your Gmail inbox.",
-    "author": "Pranjal Singh",
+    "author": "Sudhanshu Dubey",
     "permissions": [
         "activeTab",
         "storage",
         "scripting",
-        "https://phisingemaildetector.vercel.app/"
+        "https://phisingemaildetector.vercel.app"
     ],
     "background": {
         "service_worker": "background.js"
